@@ -8,7 +8,7 @@ Source: `https://jsonplaceholder.typicode.com/users` (10 customers).
 
 | File | What it is |
 |---|---|
-| `customers.py` | All the code: fetching, exploring, extracting, counting, pandas, charts and CSV export |
+| `analysis.ipynb` | All the code: fetching, exploring, extracting, counting, pandas, charts and CSV export |
 | `output/customers.csv` | One row per customer, 12 columns, no index column |
 | `output/city_counts.csv` | One row per city (`city`, `customers`), most customers first |
 | `output/customer_distribution.png` | Chart: customers per city |
@@ -18,7 +18,7 @@ Source: `https://jsonplaceholder.typicode.com/users` (10 customers).
 
 ```bash
 pip install requests pandas matplotlib
-python customers.py
+python analysis.ipynb
 ```
 
 The same code also runs in a Jupyter notebook: run the function cells first, in order, then the final cell with the `if __name__ == "__main__":` block.
@@ -97,5 +97,5 @@ Note that the city names in this directory are placeholder names, so "wider regi
 ## Method notes
 
 - Plain Python first (loops, `dict.get`, a set comprehension), then pandas, to confirm both give the same answer.
-- Network failures print a clear message and return an empty list instead of a traceback
+- Network failures print a clear message and return an empty list instead of a traceback.
 - Charts use one colour for one series, with the value at the end of each bar, and are sized for a slide.
